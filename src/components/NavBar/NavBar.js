@@ -10,9 +10,10 @@ function NavBar() {
         <div className="d-flex flex-wrap align-items-center justify-content-center py-3 mb-4">
           <a
             href="/"
-            className="d-flex align-items-center col-md-6 mb-2 mb-md-0"
+            className="d-flex align-items-center col-md-6 mb-2 mb-md-0 text-decoration-none text-dark"
           >
-            <img className="logo" src={logo} alt="logo" />
+            <img className="bi me-2 logo" src={logo} alt="logo" />
+            <span className="fs-4">e-Rammstein</span>
           </a>
           <ul class="nav nav-pills">
             <li className="nav-item">
