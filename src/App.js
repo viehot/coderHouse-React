@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <NavBar />
       <ItemListContainer title="Bienvenido a la Tienda de Rammstein"/>
-      <ItemCount />
+      <ItemCount stock={5} inicial={0} />
     </div>
   );
 }
