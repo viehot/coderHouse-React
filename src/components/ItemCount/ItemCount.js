@@ -17,6 +17,8 @@ const ItemCount = ({ stock, inicial, onAdd }) => {
     }
   };
 
+  let validar = stock === 0 ? true : false;
+
   return (
     <div>
       <div className="input-group mb-3 div-count">
@@ -27,18 +29,21 @@ const ItemCount = ({ stock, inicial, onAdd }) => {
           type="number"
           className="form-control count-input"
           value={count}
+          disabled={validar}
           //defaultValue="0"
           onChange={(e) => setCount(e.target.value)}
         />
         <button
           className="btn btn-success"
           onClick={increment}
-          disabled={stock === 0 ? true : false}
+          disabled={validar}
         >
           <BsFillCartPlusFill />
         </button>
       </div>
-      <button onClick={onAdd}>Sumar al carrito</button>
+      <button onClick={() => onAdd(count)} disabled={validar}>
+        Sumar al carrito
+      </button>
     </div>
   );
 };
