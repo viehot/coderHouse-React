@@ -16,7 +16,7 @@ function NavBar() {
             <img className="bi me-2 logo" src={logo} alt="logo" />
             <span className="fs-4">e-Rammstein</span>
           </a>
-          <ul class="nav nav-pills">
+          <ul className="nav nav-pills">
             <li className="nav-item">
               <a
                 href="/"

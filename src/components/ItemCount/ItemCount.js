@@ -3,9 +3,8 @@ import { BsFillCartDashFill, BsFillCartPlusFill } from "react-icons/bs";
 
 import "./ItemCount.css";
 
-const ItemCount = ({ stock, inicial }) => {
+const ItemCount = ({ stock, inicial, onAdd }) => {
   const [count, setCount] = useState(inicial);
-
   const increment = () => {
     if (count < stock) {
       setCount(count + 1);
@@ -19,7 +18,7 @@ const ItemCount = ({ stock, inicial }) => {
   };
 
   return (
-    <>
+    <div>
       <div className="input-group mb-3 div-count">
         <button className="btn btn-danger" onClick={decrement}>
           <BsFillCartDashFill />
@@ -28,7 +27,8 @@ const ItemCount = ({ stock, inicial }) => {
           type="number"
           className="form-control count-input"
           value={count}
-          //defaultValue={count}
+          //defaultValue="0"
+          onChange={(e) => setCount(e.target.value)}
         />
         <button
           className="btn btn-success"
@@ -38,7 +38,8 @@ const ItemCount = ({ stock, inicial }) => {
           <BsFillCartPlusFill />
         </button>
       </div>
-    </>
+      <button onClick={onAdd}>Sumar al carrito</button>
+    </div>
   );
 };
 
