@@ -3,7 +3,7 @@
         "id": 1,
         "name": "Zeit",
         "category": "disco",
-        "precio": 1000,
+        "price": 1000,
         "stock": 5,
         "img": "https://shop.rammstein.de/img/katalog/2221/488/20220328-101015_rammsteinzeitstdcda3dpsrplus.jpg.webp",
         "description": "Cd con 4 paneles, banderola con relieves dorados y folleto de 20 paginas"
@@ -12,7 +12,7 @@
         "id": 2,
         "name": "Reise, Reise",
         "category": "disco",
-        "precio": 900,
+        "price": 900,
         "stock": 10,
         "img": "https://shop.rammstein.de/img/katalog/103/488/20211012-103223_Rammstein_ReiseReise_3DPS_grau.jpg.webp",
         "description": "En 2021, Rammstein reedita el álbum en un formato digipak revisado. Contiene el master de audio original y se presenta en un digipak de 3 paneles en formato estándar con un folleto de 16 páginas."
@@ -21,7 +21,7 @@
         "id": 3,
         "name": "Im fluss der zeit",
         "category": "merchandesing",
-        "precio": 1500,
+        "price": 1500,
         "stock": 5,
         "img": "https://shop.rammstein.de/img/katalog/2227/488/20220307-094458_tsgesichterimsandfront.png.webp",
         "description": "Camiseta negra con estampado en el pecho. Material 100% algodón"
