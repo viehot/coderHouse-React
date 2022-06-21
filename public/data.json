@@ -5,7 +5,7 @@
         "category": "disco",
         "price": 1000,
         "stock": 5,
-        "img": "https://shop.rammstein.de/img/katalog/2221/488/20220328-101015_rammsteinzeitstdcda3dpsrplus.jpg.webp",
+        "img": "https://shop.rammstein.de/img/katalog/2221/488/20220328-101015_rammsteinzeitstdcda3dpsrplus.jpg",
         "description": "Cd con 4 paneles, banderola con relieves dorados y folleto de 20 paginas"
     },
     {
@@ -14,7 +14,7 @@
         "category": "disco",
         "price": 900,
         "stock": 10,
-        "img": "https://shop.rammstein.de/img/katalog/103/488/20211012-103223_Rammstein_ReiseReise_3DPS_grau.jpg.webp",
+        "img": "https://shop.rammstein.de/img/katalog/103/2048/20211012-103223_Rammstein_ReiseReise_3DPS_grau.jpg",
         "description": "En 2021, Rammstein reedita el álbum en un formato digipak revisado. Contiene el master de audio original y se presenta en un digipak de 3 paneles en formato estándar con un folleto de 16 páginas."
     },
     {
@@ -23,7 +23,7 @@
         "category": "merchandesing",
         "price": 1500,
         "stock": 5,
-        "img": "https://shop.rammstein.de/img/katalog/2227/488/20220307-094458_tsgesichterimsandfront.png.webp",
+        "img": "https://shop.rammstein.de/img/katalog/2227/488/20220307-094458_tsgesichterimsandfront.png",
         "description": "Camiseta negra con estampado en el pecho. Material 100% algodón"
     }
 ]
