@@ -1,16 +1,25 @@
 import "/node_modules/bootstrap/dist/css/bootstrap.css";
-import "./App.css";
-import NavBar from "./components/NavBar/NavBar";
-import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
-import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import { BrowserRouter as Rutas, Routes, Route } from "react-router-dom";
 
+import "./App.css";
+
+import NavBar from "./components/NavBar/NavBar";
+
+import Home from "./views/Home";
+import Category from "./views/Category";
+import DetailItem from "./views/DetailItem";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <ItemListContainer title="Bienvenido a la Tienda de Rammstein"/>
-      <ItemDetailContainer />
+      <Rutas>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/category" element={<Category />} />
+          <Route path="/item" element={<DetailItem />} />
+        </Routes>
+      </Rutas>
     </div>
   );
 }
