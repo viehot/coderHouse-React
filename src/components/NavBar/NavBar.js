@@ -1,7 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom"
+
+//CSS
 import "./NavBar.css";
+
+//Component
 import CardWidget from "../CardWidget/CardWidget";
 
+//Imagen
 import logo from "./Rammstein_logo-min.png";
 
 function NavBar() {
@@ -9,27 +15,27 @@ function NavBar() {
     <header className="bg-light">
       <div className="container">
         <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4">
-          <a
-            href="/"
+          <Link
+            to="/"
             className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none text-dark"
           >
             <img className="bi me-2 logo" src={logo} alt="logo" />
             <span className="fs-4">e-Rammstein</span>
-          </a>
+          </Link>
           <ul className="nav nav-pills">
             <li className="nav-item">
-              <a
-                href="/"
+              <Link
+                to={`/category/merchandesing`}
                 className="nav-link px-2 link-dark"
                 aria-current="page"
               >
                 Merchandising
-              </a>
+              </Link>
             </li>
             <li className="nav-item">
-              <a href="/" className="nav-link px-2 link-dark">
+              <Link to={`/category/disco`} className="nav-link px-2 link-dark">
                 Discos
-              </a>
+              </Link>
             </li>
           </ul>
           <CardWidget />

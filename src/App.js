@@ -14,16 +14,16 @@ import DetailItem from "./views/DetailItem";
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <Rutas>
+    <Rutas>
+      <div className="App">
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/category/:id" element={<Category />} />
+          <Route path="/category/:idCategory" element={<Category />} />
           <Route path="/item/:id" element={<DetailItem />} />
         </Routes>
-      </Rutas>
-    </div>
+      </div>
+    </Rutas>
   );
 }
 

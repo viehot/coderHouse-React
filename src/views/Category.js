@@ -1,8 +1,13 @@
 import React from 'react'
 
+//Componentes
+import ItemListContainer from '../components/ItemListContainer/ItemListContainer'
+
 const Category = () => {
   return (
-    <div>category</div>
+    <div>
+        <ItemListContainer />
+    </div>
   )
 }
 
