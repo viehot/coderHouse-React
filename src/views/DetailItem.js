@@ -1,8 +1,13 @@
 import React from 'react'
 
+//Componentes
+import ItemDetailContainer from '../components/ItemDetailContainer/ItemDetailContainer'
+
 const DetailItem = () => {
   return (
-    <div>DetailItem</div>
+    <div>
+        <ItemDetailContainer />
+    </div>
   )
 }
 
