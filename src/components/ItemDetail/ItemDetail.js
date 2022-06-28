@@ -1,9 +1,17 @@
 import React from "react";
+import ItemCount from "../ItemCount/ItemCount";
 
 // CSS
 import "./ItemDetail.css"
 
-const ItemDetail = ({name, img, description, price}) => {
+const ItemDetail = ({name, img, description, price, stock}) => {
+
+  const onAdd = (number) => {
+    number != 0
+      ? alert("El carrito se cargo con " + number)
+      : alert("No agrego nada");
+  };
+
   return (
     <div>
       <div className="card mb-3 card-container">
@@ -20,6 +28,10 @@ const ItemDetail = ({name, img, description, price}) => {
               <p className="card-text">
                 Precio: {price}$
               </p>
+              <p className="card-text">
+                Stock: {stock}
+              </p>
+              <ItemCount stock={stock} inicial={0} onAdd={onAdd} />
             </div>
           </div>
         </div>

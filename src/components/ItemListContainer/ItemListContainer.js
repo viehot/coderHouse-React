@@ -8,11 +8,6 @@ import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
 const ItemListContainer = ({ title }) => {
-  /*const onAdd = (number) => {
-    number != 0
-      ? alert("El carrito se cargo con " + number)
-      : alert("No agrego nada");
-  };*/
 
   const [items, setItems] = useState([])
 

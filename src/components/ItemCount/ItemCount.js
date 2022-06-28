@@ -44,7 +44,7 @@ const ItemCount = ({ stock, inicial, onAdd }) => {
           <BsFillCartPlusFill />
         </button>
       </div>
-      <button onClick={() => onAdd(count)} disabled={validar}>
+      <button onClick={() => onAdd(count)} disabled={validar} className="btn btn-success">
         Sumar al carrito
       </button>
     </div>

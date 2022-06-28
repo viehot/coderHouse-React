@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
   return (
     <div>
         {loading ? (
-        <ItemDetail name={item.name} img={item.img} description={item.description} price={item.price} />
+        <ItemDetail name={item.name} img={item.img} description={item.description} price={item.price} stock={item.stock} />
       ) : (
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>
