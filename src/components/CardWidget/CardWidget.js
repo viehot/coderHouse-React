@@ -1,5 +1,9 @@
 import React from 'react'
+
+// Icono
 import {BsCartFill} from "react-icons/bs"
+
+// CSS
 import "./CardWidget.css";
 
 const CardWidget = () => {

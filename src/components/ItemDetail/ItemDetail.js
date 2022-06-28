@@ -1,5 +1,6 @@
 import React from "react";
 
+// CSS
 import "./ItemDetail.css"
 
 const ItemDetail = ({name, img, description, price}) => {

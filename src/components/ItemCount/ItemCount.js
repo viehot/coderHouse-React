@@ -1,6 +1,9 @@
 import { useState } from "react";
+
+// Iconos
 import { BsFillCartDashFill, BsFillCartPlusFill } from "react-icons/bs";
 
+// CSS
 import "./ItemCount.css";
 
 const ItemCount = ({ stock, inicial, onAdd }) => {
