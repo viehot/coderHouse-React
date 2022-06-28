@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import {Link} from "react-router-dom"
+
+// Component
 import ItemCount from "../ItemCount/ItemCount";
 
 // CSS
@@ -6,9 +9,11 @@ import "./ItemDetail.css"
 
 const ItemDetail = ({name, img, description, price, stock}) => {
 
+  const [carrito , setCarrito] = useState(0)
+
   const onAdd = (number) => {
     number != 0
-      ? alert("El carrito se cargo con " + number)
+      ? setCarrito(carrito + number)
       : alert("No agrego nada");
   };
 
@@ -31,7 +36,9 @@ const ItemDetail = ({name, img, description, price, stock}) => {
               <p className="card-text">
                 Stock: {stock}
               </p>
-              <ItemCount stock={stock} inicial={0} onAdd={onAdd} />
+              {carrito === 0
+                ? <ItemCount stock={stock} inicial={0} onAdd={onAdd} />
+                : <Link to="/cart" className="btn btn-primary">Terminar compra</Link>}
             </div>
           </div>
         </div>
