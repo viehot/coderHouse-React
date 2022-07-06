@@ -12,17 +12,22 @@ import Home from "./views/Home";
 import Category from "./views/Category";
 import DetailItem from "./views/DetailItem";
 
+// Huc provider
+import { CarritoProvider } from "./CartContext";
+
 function App() {
   return (
     <Rutas>
-      <div className="App">
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/category/:idCategory" element={<Category />} />
-          <Route path="/item/:id" element={<DetailItem />} />
-        </Routes>
-      </div>
+      <CarritoProvider>
+        <div className="App">
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/category/:idCategory" element={<Category />} />
+            <Route path="/item/:id" element={<DetailItem />} />
+          </Routes>
+        </div>
+      </CarritoProvider>
     </Rutas>
   );
 }
