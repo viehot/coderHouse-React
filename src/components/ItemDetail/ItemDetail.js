@@ -11,13 +11,17 @@ import "./ItemDetail.css"
 
 const ItemDetail = ({item}) => {
 
-  const [carr , setCarr, addItem] = useContext(Carrito)
+  const [carr , setCarr, addItem,removeItem, clear, isInCart] = useContext(Carrito)
 
   const onAdd = (number) => {
     number != 0
       ? addItem(item,number)
       : alert("No agrego nada");
   };
+  const validar = (id) => {
+    return isInCart(id)
+  }
+  
 
   return (
     <div>
@@ -38,7 +42,7 @@ const ItemDetail = ({item}) => {
               <p className="card-text">
                 Stock: {item.stock}
               </p>
-              {carr.length === 0
+              {!validar(item.id)
                 ? <ItemCount stock={item.stock} inicial={0} onAdd={onAdd} />
                 : <Link to="/cart" className="btn btn-primary">Terminar compra</Link>}
             </div>
