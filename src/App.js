@@ -11,6 +11,7 @@ import NavBar from "./components/NavBar/NavBar";
 import Home from "./views/Home";
 import Category from "./views/Category";
 import DetailItem from "./views/DetailItem";
+import Cart from "./views/Cart";
 
 // Huc provider
 import { CarritoProvider } from "./CartContext";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/category/:idCategory" element={<Category />} />
             <Route path="/item/:id" element={<DetailItem />} />
+            <Route path="/cart" element={<Cart />} />
           </Routes>
         </div>
       </CarritoProvider>

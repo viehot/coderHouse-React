@@ -6,12 +6,14 @@ export const CarritoProvider = ({children}) => {
 
     const [carr, setCarr] = useState([])
 
-    const ver = () => {
-        console.log(carr.length)
+    const addItem = (item, quantity) => {
+        let carga = {...item, quantity: quantity}
+        setCarr(carr.push(carga))
+        console.log(carr)
     }
 
     return (
-        <Carrito.Provider value={[carr, setCarr, ver]} >
+        <Carrito.Provider value={[carr, setCarr, addItem]} >
             {children}
         </Carrito.Provider>
     )
