@@ -1,4 +1,17 @@
+.cartWidget {
+    text-decoration: none;
+    color: black;
+}
+
+.cartWidget:hover {
+    color: black;
+}
+
 .cart-icon {
     width: 25px;
     height: 25px;
+}
+
+.spanTotal {
+    font-size: 20px;
 }
