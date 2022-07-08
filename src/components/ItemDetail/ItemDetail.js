@@ -44,7 +44,8 @@ const ItemDetail = ({item}) => {
               </p>
               {!validar(item.id)
                 ? <ItemCount stock={item.stock} inicial={0} onAdd={onAdd} />
-                : <Link to="/cart" className="btn btn-primary">Terminar compra</Link>}
+                : <Link to="/cart" className="btn btn-primary">IR al carrito</Link>}
+              <Link to="/" className="btn btn-primary m-2">Volver</Link>
             </div>
           </div>
         </div>

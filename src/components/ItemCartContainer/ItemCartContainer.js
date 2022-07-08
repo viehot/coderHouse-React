@@ -27,7 +27,9 @@ const ItemCartContainer = () => {
           {carr[0] ? (
             <>
               <button onClick={() => clear()}>Borrar todo</button>
-              {carr.map((item) => <ItemCart item={item} key={item.id} />)}
+              {carr.map((item) => (
+                <ItemCart item={item} key={item.id} />
+              ))}
             </>
           ) : (
             <div>
@@ -38,9 +40,12 @@ const ItemCartContainer = () => {
             </div>
           )}
         </div>
-        <div className="col-md-4">
-          <h1>Total de venta: {total}</h1>
-        </div>
+        {carr[0] && (
+          <div className="col-md-4">
+            <h1>Total de venta: {total}</h1>
+            <button className="btn btn-primary">Terminar compra</button>
+          </div>
+        )}
       </div>
     </div>
   );
