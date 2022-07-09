@@ -22,11 +22,11 @@ const ItemCartContainer = () => {
 
   return (
     <div className="container">
-      <div className="row">
+      <div className="row g-6">
         <div className="col-md-8">
           {carr[0] ? (
             <>
-              <button onClick={() => clear()}>Borrar todo</button>
+              <button onClick={() => clear()} className="btn btn-danger m-4 ">Borrar todo</button>
               {carr.map((item) => (
                 <ItemCart item={item} key={item.id} />
               ))}
