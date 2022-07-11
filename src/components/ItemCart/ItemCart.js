@@ -20,9 +20,6 @@ const ItemCart = ({item}) => {
               <p className="card-text">
               Con el precio de {item.price}$
               </p>
-              <p className="card-text">
-                Stock: {item.stock}
-              </p>
               <button onClick={() => removeItem(item.id)} className="btn btn-danger">Borrar</button>
             </div>
           </div>
