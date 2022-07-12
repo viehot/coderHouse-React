@@ -22,7 +22,7 @@ const ItemDetail = ({item}) => {
     return isInCart(id)
   }
   
-
+  console.log(item.img)
   return (
     <div>
       <div className="card mb-3 card-container">
