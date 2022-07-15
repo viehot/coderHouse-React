@@ -21,8 +21,7 @@ const ItemDetail = ({item}) => {
   const validar = (id) => {
     return isInCart(id)
   }
-  
-  console.log(item.img)
+
   return (
     <div>
       <div className="card mb-3 card-container">
