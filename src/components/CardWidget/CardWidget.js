@@ -26,12 +26,14 @@ const CardWidget = () => {
 
   return (
     <div>
-      {carr[0] && (
-        <Link to="/cart" className="cartWidget">
-          <BsCartFill className="cart-icon" />
-          <span className="spanTotal">{total}</span>
-        </Link>
-      )}
+      <Link to="/cart" className="cartWidget">
+        <BsCartFill className="cart-icon" />
+        {carr[0] && (
+          <span className="translate-middle badge rounded-pill bg-danger">
+            {total}
+          </span>
+        )}
+      </Link>
     </div>
   );
 };
