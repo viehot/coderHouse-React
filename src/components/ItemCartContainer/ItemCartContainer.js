@@ -36,11 +36,15 @@ const ItemCartContainer = () => {
       date: Timestamp.now(),
       total: total,
     });
-    console.log("Document written with ID: ", compra.id);
     setIdSuccess(compra.id);
     setUser(usuario)
     setCarr([])
   };
+
+  const finalCompra = (id) => {
+    setIdSuccess(id)
+    setCarr([])
+  }
 
   useEffect(() => {
     let suma = 0;
@@ -60,7 +64,7 @@ const ItemCartContainer = () => {
         </div>
       ) : (
         <div className="row g-6">
-          <div className="col-md-8">
+          <div className="col-md-7">
             {carr[0] ? (
               <>
                 <button onClick={() => clear()} className="btn btn-danger m-4 ">
@@ -80,8 +84,8 @@ const ItemCartContainer = () => {
             )}
           </div>
           {carr[0] && (
-            <div className="col-md-4">
-              <h1>Total de venta: {total}</h1>
+            <div className="col-md-5">
+              <h1>Total de venta: {total}$</h1>
               <form onSubmit={onSubmit}>
                 <div className="form-floating m-2">
                   <input
@@ -92,6 +96,7 @@ const ItemCartContainer = () => {
                     name="name"
                     value={user.name}
                     onChange={handleOnChange}
+                    required
                   />
                   <label htmlFor="floatingInput">Nombre</label>
                 </div>
@@ -104,6 +109,7 @@ const ItemCartContainer = () => {
                     name="phone"
                     value={user.phone}
                     onChange={handleOnChange}
+                    required
                   />
                   <label htmlFor="floatingPhone">Telefono</label>
                 </div>
@@ -116,6 +122,7 @@ const ItemCartContainer = () => {
                     name="email"
                     value={user.email}
                     onChange={handleOnChange}
+                    required
                   />
                   <label htmlFor="floatingInput">Email</label>
                 </div>

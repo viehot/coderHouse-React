@@ -8,7 +8,7 @@ import "./NavBar.css";
 import CardWidget from "../CardWidget/CardWidget";
 
 //Imagen
-import logo from "./Rammstein_logo-min.png";
+// import logo from "../../../public/assets/Rammstein_logo-min.png";
 
 function NavBar() {
   return (
@@ -19,7 +19,7 @@ function NavBar() {
             to="/"
             className="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-decoration-none text-dark"
           >
-            <img className="bi me-2 logo" src={logo} alt="logo" />
+            <img className="bi me-2 logo" src={"./assets/Rammstein_logo-min.png"} alt="logo" />
             <span className="fs-4">e-Rammstein</span>
           </Link>
           <ul className="nav nav-pills">
