@@ -15,6 +15,9 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState({});
+
+  const [validar, setValidar] = useState(true);
+
   const [loading, setLoading] = useState(false);
 
   const { id } = useParams();
@@ -22,20 +25,32 @@ const ItemDetailContainer = () => {
   useEffect(() => {
     const fireDataId = async () => {
       const q = query(collection(db, "product"), where(documentId(), "==", id));
- 
+
       const list = await getDocs(q);
-      list.forEach((item) => {
-        setItem({ id: item.id, ...item.data() })
-      });
+      if (!list.empty) {
+        list.forEach((item) => {
+          setItem({ id: item.id, ...item.data() });
+        });
+      } else {
+        setValidar(false);
+      }
+      setLoading(true);
     };
-    fireDataId()
-    setLoading(true);
+    fireDataId();
   }, []);
 
   return (
     <div>
       {loading ? (
-        <ItemDetail item={item} />
+        <div>
+          {validar ? (
+            <ItemDetail item={item} />
+          ) : (
+            <div className="alert alert-danger" role="alert">
+              Error: Producto inexistente
+            </div>
+          )}
+        </div>
       ) : (
         <div className="spinner-border" role="status">
           <span className="visually-hidden">Loading...</span>

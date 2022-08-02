@@ -37,14 +37,9 @@ const ItemCartContainer = () => {
       total: total,
     });
     setIdSuccess(compra.id);
-    setUser(usuario)
-    setCarr([])
+    setUser(usuario);
+    setCarr([]);
   };
-
-  const finalCompra = (id) => {
-    setIdSuccess(id)
-    setCarr([])
-  }
 
   useEffect(() => {
     let suma = 0;
@@ -60,29 +55,28 @@ const ItemCartContainer = () => {
     <div className="container">
       {idSuccess ? (
         <div className="alert alert-success" role="alert">
-          Su compra fue realizada correctamente. Su numero de seguimiento es {idSuccess}
+          Su compra fue realizada correctamente. Su numero de seguimiento es{" "}
+          {idSuccess}
         </div>
       ) : (
         <div className="row g-6">
-          <div className="col-md-7">
-            {carr[0] ? (
-              <>
-                <button onClick={() => clear()} className="btn btn-danger m-4 ">
-                  Borrar todo
-                </button>
-                {carr.map((item) => (
-                  <ItemCart item={item} key={item.id} />
-                ))}
-              </>
-            ) : (
-              <div>
-                <h1>No has seleccionado ningun producto</h1>
-                <Link to="/" className="btn btn-primary">
-                  Volver a Comprar
-                </Link>
-              </div>
-            )}
-          </div>
+          {carr[0] ? (
+            <div className="col-md-7">
+              <button onClick={() => clear()} className="btn btn-danger m-4 ">
+                Borrar todo
+              </button>
+              {carr.map((item) => (
+                <ItemCart item={item} key={item.id} />
+              ))}
+            </div>
+          ) : (
+            <div className="col-md-12">
+              <h1>No has seleccionado ningun producto</h1>
+              <Link to="/" className="btn btn-primary">
+                Volver a Comprar
+              </Link>
+            </div>
+          )}
           {carr[0] && (
             <div className="col-md-5">
               <h1>Total de venta: {total}$</h1>
